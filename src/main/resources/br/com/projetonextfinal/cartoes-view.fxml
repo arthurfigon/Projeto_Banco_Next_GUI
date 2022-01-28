@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: ffffff" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.projetonextfinal.controllers.CartoesController">
+    <children>
+        <ImageView fitHeight="78.0" fitWidth="115.0" layoutX="67.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/next-6.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="462.0" layoutY="35.0" onMouseClicked="#onBtCreditoAction" stylesheets="@fonts/Font.css" text="CARTÃO DE CRÉDITO">
+            <font>
+                <Font name="Bradesco Sans Medium" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="667.0" layoutY="35.0" onMouseClicked="#onBtDebitoAction" stylesheets="@fonts/Font.css" text="CARTÃO DE DÉBITO">
+            <font>
+                <Font name="Bradesco Sans Medium" size="12.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="659.0" fitWidth="589.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/tata.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="62.0" fitWidth="135.0" layoutX="1094.0" layoutY="18.0" onMouseClicked="#onBtVoltarAction" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/Voltar.png" />
+            </image>
+        </ImageView>
+      <ImageView fitHeight="226.0" fitWidth="402.0" layoutX="852.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Cartao.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="idNumeroCartao" layoutX="881.0" layoutY="246.0" styleClass="meuPadrao" stylesheets="@fonts/Fonts.css" text="0000 0000 0000 0000" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="idNomeCartao" layoutX="881.0" layoutY="277.0" styleClass="meuPadrao" stylesheets="@fonts/Fonts.css" text="Banco Next" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="idPaneOpcoesCredito" layoutX="457.0" layoutY="67.0" prefHeight="252.0" prefWidth="137.0" visible="false">
+         <children>
+            <ImageView fitHeight="49.0" fitWidth="153.0" onMouseClicked="#onSelecionarCadastrarCredito" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Cadastrar.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="49.0" fitWidth="153.0" layoutX="1.0" layoutY="50.0" onMouseClicked="#onBtPagarFaturaAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/PagarFatura.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="49.0" fitWidth="153.0" layoutX="1.0" layoutY="100.0" onMouseClicked="#onBtComprarAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Comprar.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="49.0" fitWidth="153.0" layoutX="1.0" layoutY="150.0" onMouseClicked="#onBtSegurosAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Seguros.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="49.0" fitWidth="153.0" layoutX="1.0" layoutY="200.0" onMouseClicked="#onBtBloquearCreditoAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Bloquear.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="idPaneOpcoesDebito" layoutX="653.0" layoutY="66.0" prefHeight="154.0" prefWidth="138.0" visible="false">
+         <children>
+            <ImageView fitHeight="49.0" fitWidth="153.0" onMouseClicked="#onSelecionarCadastrarDebito" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Cadastrar.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="49.0" fitWidth="153.0" layoutY="51.0" onMouseClicked="#onBtComprarDebitoAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Comprar.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="49.0" fitWidth="153.0" layoutY="103.0" onMouseClicked="#onBtBloquearDebitoAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Bloquear.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="idPaneCadastrarCredito" layoutX="861.0" layoutY="373.0" prefHeight="328.0" prefWidth="402.0" visible="false">
+         <children>
+            <Label layoutX="34.0" layoutY="23.0" prefHeight="32.0" prefWidth="97.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Senha:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoSenhaCredito" layoutX="34.0" layoutY="60.0" styleClass="checkBox" stylesheets="@fonts/Font.css" />
+            <Label layoutX="34.0" layoutY="117.0" prefHeight="32.0" prefWidth="126.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Bandeira:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoBandeiraCredito" layoutX="34.0" layoutY="154.0" styleClass="checkBox" stylesheets="@fonts/Font.css" />
+            <Label layoutX="34.0" layoutY="214.0" prefHeight="32.0" prefWidth="212.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Dia do Vencimento:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoDiaCredito" layoutX="34.0" layoutY="251.0" prefHeight="42.0" prefWidth="69.0" styleClass="checkBox" stylesheets="@fonts/Font.css" />
+            <ImageView fitHeight="49.0" fitWidth="178.0" layoutX="246.0" layoutY="248.0" onMouseClicked="#onBtCadastrarCreditoAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Cadastrar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="idPaneCadastrarDebito" layoutX="860.0" layoutY="373.0" prefHeight="328.0" prefWidth="402.0" visible="false">
+         <children>
+            <Label layoutX="34.0" layoutY="23.0" prefHeight="32.0" prefWidth="97.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Senha:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoSenhaDebito" layoutX="34.0" layoutY="60.0" styleClass="checkBox" stylesheets="@fonts/Font.css" />
+            <Label layoutX="34.0" layoutY="117.0" prefHeight="32.0" prefWidth="126.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Bandeira:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoBandeiraDebito" layoutX="34.0" layoutY="154.0" styleClass="checkBox" stylesheets="@fonts/Font.css" />
+            <Label layoutX="34.0" layoutY="214.0" prefHeight="32.0" prefWidth="212.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Limite:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoLimiteDebito" layoutX="34.0" layoutY="251.0" prefHeight="42.0" prefWidth="150.0" styleClass="checkBox" stylesheets="@fonts/Font.css" />
+            <ImageView fitHeight="49.0" fitWidth="178.0" layoutX="246.0" layoutY="248.0" onMouseClicked="#onBtCadastrarDebitoAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Cadastrar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="idPaneCompraCredito" layoutX="862.0" layoutY="380.0" prefHeight="328.0" prefWidth="402.0" visible="false">
+         <children>
+            <Label layoutX="34.0" layoutY="23.0" prefHeight="32.0" prefWidth="97.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Produto:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoProdutoCredito" layoutX="34.0" layoutY="60.0" styleClass="checkBox" stylesheets="@fonts/Font.css" />
+            <Label layoutX="34.0" layoutY="117.0" prefHeight="32.0" prefWidth="126.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Valor:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoValorCredito" layoutX="34.0" layoutY="154.0" styleClass="checkBox" stylesheets="@fonts/Font.css" />
+            <ImageView fitHeight="49.0" fitWidth="178.0" layoutX="34.0" layoutY="239.0" onMouseClicked="#onBtConfirmarCompraAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Comprar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="idPaneCompraDebito" layoutX="862.0" layoutY="380.0" prefHeight="328.0" prefWidth="402.0" visible="false">
+         <children>
+            <Label layoutX="34.0" layoutY="23.0" prefHeight="32.0" prefWidth="97.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Produto:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoProdutoDebito" layoutX="34.0" layoutY="60.0" styleClass="checkBox" stylesheets="@fonts/Font.css" />
+            <Label layoutX="34.0" layoutY="117.0" prefHeight="32.0" prefWidth="126.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Valor:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoValorDebito" layoutX="34.0" layoutY="154.0" styleClass="checkBox" stylesheets="@fonts/Font.css" />
+            <ImageView fitHeight="49.0" fitWidth="178.0" layoutX="34.0" layoutY="239.0" onMouseClicked="#onBtPagarCompraDebito" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Comprar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="idPaneFatura" layoutX="881.0" layoutY="390.0" prefHeight="189.0" prefWidth="344.0" style="-fx-border-color: #000000; -fx-border-width: 2; -fx-border-radius: 5;" visible="false">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="32.0" prefWidth="126.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Sua Fatura:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="idFatura" layoutX="15.0" layoutY="71.0" prefHeight="48.0" prefWidth="314.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="R$ 00.00">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <Label fx:id="idFaturaVencimento" layoutX="15.0" layoutY="119.0" prefHeight="48.0" prefWidth="314.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Vencimento: 01/01">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

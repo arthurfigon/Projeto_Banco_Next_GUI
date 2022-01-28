@@ -1,0 +1,19 @@
+@font-face {
+	font-family: 'Bradesco Sans Medium';
+	src: url('BradescoSansMedium.ttf');
+}
+
+.text {
+    -fx-font-family: 'Bradesco Sans Medium';
+}
+
+.textPadrao {
+    -fx-font-family: 'Bradesco Sans Medium';
+    -fx-font-size: 16pt;
+}
+
+.checkBox{
+    -fx-font-family: 'Bradesco Sans Medium';
+    -fx-text-fill: #121212;
+    -fx-font-size: 16pt;
+}

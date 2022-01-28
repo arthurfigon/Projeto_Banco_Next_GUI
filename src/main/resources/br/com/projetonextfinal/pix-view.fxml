@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color:ffffff" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.projetonextfinal.controllers.PixController">
+    <children>
+        <ImageView fitHeight="62.0" fitWidth="135.0" layoutX="1094.0" layoutY="18.0" onMouseClicked="#onBtVoltarAction" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/Voltar.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="78.0" fitWidth="115.0" layoutX="67.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/next-6.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="295.0" layoutY="35.0" onMouseClicked="#onBtCadastrarChaveAction" stylesheets="@fonts/Font.css" text="CADASTRAR CHAVE">
+            <font>
+                <Font name="Bradesco Sans Medium" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="591.0" layoutY="35.0" onMouseClicked="#onBtConsultarChaveAction" stylesheets="@fonts/Font.css" text="CONSULTAR CHAVE">
+            <font>
+                <Font name="Bradesco Sans Medium" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="874.0" layoutY="35.0" onMouseClicked="#onBtProcurarAction" stylesheets="@fonts/Font.css" text="PAGAR PIX">
+            <font>
+                <Font name="Bradesco Sans Medium" size="12.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="659.0" fitWidth="589.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/tata.png" />
+            </image>
+        </ImageView>
+      <AnchorPane fx:id="idPaneCadastro" layoutX="767.0" layoutY="136.0" prefHeight="509.0" prefWidth="300.0" visible="false">
+         <children>
+            <Label layoutX="21.0" layoutY="57.0" prefHeight="26.0" prefWidth="262.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Tipos Chaves Dísponíveis: ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="98.0" prefHeight="26.0" prefWidth="316.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="CPF, Email, Telefone, Aleatorio">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="176.0" prefHeight="26.0" prefWidth="230.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Tipo de Chave: ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtConteudoCadastroChave" layoutX="21.0" layoutY="212.0" promptText="Tipo de Chave" styleClass="checkBox" stylesheets="@fonts/Font.css" />
+            <Label layoutX="21.0" layoutY="287.0" prefHeight="26.0" prefWidth="230.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Valor: ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtValorChave" layoutX="21.0" layoutY="323.0" promptText="00.00" styleClass="checkBox" stylesheets="@fonts/Font.css" />
+            <ImageView fitHeight="62.0" fitWidth="184.0" layoutX="21.0" layoutY="411.0" onMouseClicked="#cadastraChaveAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/CadastrarChave.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane fx:id="idPaneConsulta" layoutX="767.0" layoutY="136.0" prefHeight="509.0" prefWidth="300.0" visible="false">
+         <children>
+            <Label layoutX="21.0" layoutY="57.0" prefHeight="26.0" prefWidth="262.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Tipos Chaves Dísponíveis: ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="98.0" prefHeight="26.0" prefWidth="316.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="CPF, Email, Telefone, Aleatorio">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="216.0" prefHeight="26.0" prefWidth="230.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Tipo de Chave: ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtConteudoConsultaChave" layoutX="21.0" layoutY="252.0" promptText="Tipo de Chave" styleClass="checkBox" stylesheets="@fonts/Font.css" />
+            <ImageView fitHeight="62.0" fitWidth="184.0" layoutX="21.0" layoutY="411.0" onMouseClicked="#consultaChaveAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/ConsultarChaves.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="idPanePagamento" layoutX="724.0" layoutY="193.0" prefHeight="396.0" prefWidth="300.0" visible="false">
+         <children>
+            <Label layoutX="21.0" layoutY="30.0" prefHeight="26.0" prefWidth="230.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Tipo de Chave: ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCampoPagamentoPix" layoutX="21.0" layoutY="63.0" promptText="Tipo de Chave" styleClass="checkBox" stylesheets="@fonts/Font.css" />
+            <ImageView fitHeight="41.0" fitWidth="141.0" layoutX="21.0" layoutY="114.0" onMouseClicked="#onBtShowChaveDados" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/ConsultarChaves.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="idPaneConta" layoutX="15.0" layoutY="189.0" prefHeight="200.0" prefWidth="230.0" visible="false">
+               <children>
+                  <Label fx:id="idLabelCPF" layoutX="8.0" layoutY="14.0" prefHeight="26.0" prefWidth="230.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="CPF:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="idLabelNome" layoutX="8.0" layoutY="40.0" prefHeight="26.0" prefWidth="230.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Nome:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="idLabelValor" layoutX="8.0" layoutY="66.0" prefHeight="26.0" prefWidth="230.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Valor:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="41.0" fitWidth="135.0" layoutX="8.0" layoutY="131.0" onMouseClicked="#transfereDinheiro" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Pagar.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

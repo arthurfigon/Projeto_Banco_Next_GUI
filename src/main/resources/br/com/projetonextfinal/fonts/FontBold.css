@@ -1,0 +1,19 @@
+@font-face {
+	font-family: 'Bradesco Sans';
+	src: url('BradescoSansBold.ttf');
+}
+
+.textBold {
+    -fx-font-family: 'Bradesco Sans';
+}
+
+.textPadraoBold {
+    -fx-font-family: 'Bradesco Sans';
+    -fx-font-size: 16pt;
+}
+
+.checkBoxBold{
+    -fx-font-family: 'Bradesco Sans';
+    -fx-text-fill: #121212;
+    -fx-font-size: 16pt;
+}

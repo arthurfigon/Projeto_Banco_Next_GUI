@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: ffffff" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.projetonextfinal.controllers.RegistrarController">
+    <children>
+      <TextField fx:id="textNome" layoutX="644.0" layoutY="155.0" prefHeight="34.0" prefWidth="263.0" promptText="Banco Next" styleClass="checkBox" stylesheets="@fonts/Font.css">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="textCPF" layoutX="644.0" layoutY="234.0" promptText="1234" styleClass="checkBox" stylesheets="@fonts/Font.css">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+        <TextField fx:id="textSenha" layoutX="645.0" layoutY="314.0" promptText="12345678910" styleClass="checkBox" stylesheets="@fonts/Font.css">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="textNascimento" layoutX="645.0" layoutY="393.0" promptText="30/10/2017" styleClass="checkBox" stylesheets="@fonts/Font.css">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </TextField>
+      <TextField fx:id="textEmail" layoutX="645.0" layoutY="474.0" promptText="contato@next.com.br" styleClass="checkBox" stylesheets="@fonts/Font.css">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="textTelefone" layoutX="645.0" layoutY="550.0" promptText="(11) 99999-9999" styleClass="checkBox" stylesheets="@fonts/Font.css">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="textLogradouro" layoutX="944.0" layoutY="155.0" promptText="Rua Next" styleClass="checkBox" stylesheets="@fonts/Font.css">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="textNumero" layoutX="944.0" layoutY="234.0" promptText="999" styleClass="checkBox" stylesheets="@fonts/Font.css">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="textBairro" layoutX="945.0" layoutY="314.0" promptText="Centro" styleClass="checkBox" stylesheets="@fonts/Font.css">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="textCidade" layoutX="945.0" layoutY="393.0" promptText="São Paulo" styleClass="checkBox" stylesheets="@fonts/Font.css">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="textEstado" layoutX="945.0" layoutY="474.0" promptText="contato@next.com.br" styleClass="checkBox" stylesheets="@fonts/Font.css">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="textCEP" layoutX="945.0" layoutY="550.0" promptText="99999-999" styleClass="checkBox" stylesheets="@fonts/Font.css">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+        <ImageView fitHeight="78.0" fitWidth="115.0" layoutX="67.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/next-6.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="313.0" layoutY="35.0" stylesheets="@fonts/Font.css" text="TEM NO NEXT">
+            <font>
+                <Font name="Bradesco Sans Medium" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="472.0" layoutY="35.0" stylesheets="@fonts/Font.css" text="MIMOS">
+            <font>
+                <Font name="Bradesco Sans Medium" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="592.0" layoutY="35.0" stylesheets="@fonts/Font.css" text="SOBRE NÓS">
+            <font>
+                <Font name="Bradesco Sans Medium" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="727.0" layoutY="36.0" stylesheets="@fonts/Font.css" text="CARREIRAS">
+            <font>
+                <Font name="Bradesco Sans Medium" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="876.0" layoutY="35.0" stylesheets="@fonts/Font.css" text="AJUDA">
+            <font>
+                <Font name="Bradesco Sans Medium" size="12.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="62.0" fitWidth="135.0" layoutX="700.0" layoutY="628.0" onMouseClicked="#onBtContaCorrenteAction" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/ContaCorrente.png" />
+            </image>
+        </ImageView>
+      <ImageView fitHeight="62.0" fitWidth="135.0" layoutX="864.0" layoutY="628.0" onMouseClicked="#onBtContaPoupancaAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/ContaPoupanca.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="62.0" fitWidth="135.0" layoutX="1026.0" layoutY="628.0" onMouseClicked="#onBtAmbosAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Ambas.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="62.0" fitWidth="135.0" layoutX="1094.0" layoutY="18.0" onMouseClicked="#onBtVoltarAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Login.png" />
+         </image>
+      </ImageView>
+        <ImageView fitHeight="659.0" fitWidth="589.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/tata.png" />
+            </image>
+        </ImageView>
+      <Label alignment="TOP_LEFT" layoutX="645.0" layoutY="525.0" prefHeight="33.0" prefWidth="106.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Telefone:" textFill="#121212">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" layoutX="645.0" layoutY="447.0" prefHeight="34.0" prefWidth="227.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Email:" textFill="#121212">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" layoutX="642.0" layoutY="128.0" prefHeight="34.0" prefWidth="100.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Nome:" textFill="#121212">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+        <Label alignment="TOP_LEFT" layoutX="643.0" layoutY="207.0" prefHeight="34.0" prefWidth="100.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="CPF:" textFill="#121212">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+      <Label alignment="TOP_LEFT" layoutX="642.0" layoutY="288.0" prefHeight="34.0" prefWidth="100.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Senha:" textFill="#121212">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+        <Label alignment="TOP_LEFT" layoutX="644.0" layoutY="366.0" prefHeight="34.0" prefWidth="178.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Data de nascimento:" textFill="#121212">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+      <Label alignment="TOP_LEFT" layoutX="946.0" layoutY="366.0" prefHeight="34.0" prefWidth="178.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Cidade:" textFill="#121212">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" layoutX="945.0" layoutY="207.0" prefHeight="34.0" prefWidth="100.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Numero:" textFill="#121212">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" layoutX="947.0" layoutY="525.0" prefHeight="33.0" prefWidth="106.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="CEP:" textFill="#121212">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" layoutX="947.0" layoutY="447.0" prefHeight="34.0" prefWidth="227.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Estado:" textFill="#121212">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" layoutX="944.0" layoutY="288.0" prefHeight="34.0" prefWidth="100.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Bairro:" textFill="#121212">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" layoutX="944.0" layoutY="128.0" prefHeight="34.0" prefWidth="106.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Logradouro:" textFill="#121212">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

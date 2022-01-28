@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.projetonextfinal.controllers.ApolicesController">
+    <children>
+        <ImageView fitHeight="78.0" fitWidth="115.0" layoutX="67.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/next-6.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="659.0" fitWidth="589.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/tata.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="62.0" fitWidth="135.0" layoutX="1094.0" layoutY="18.0" onMouseClicked="#voltar" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/Voltar.png" />
+            </image>
+        </ImageView>
+      <ComboBox fx:id="idCbSeguros" layoutX="685.0" layoutY="186.0" onAction="#selecionarNaLista" prefHeight="41.0" prefWidth="340.0" promptText="Selecione um Seguro" style="-fx-background-color: #f2f2f2;" styleClass="textPadraoBold" stylesheets="@fonts/FontBold.css" />
+      <ImageView fitHeight="62.0" fitWidth="135.0" layoutX="1034.0" layoutY="182.0" onMouseClicked="#atualizarLista" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Atualizar.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="idPane" layoutX="689.0" layoutY="291.0" prefHeight="284.0" prefWidth="412.0">
+         <children>
+            <Label fx:id="idLbSeguro" layoutX="23.0" layoutY="29.0" styleClass="textPadraoBold" stylesheets="@fonts/FontBold.css" text="Seguro" />
+            <Label fx:id="idLbValor" layoutX="21.0" layoutY="88.0" styleClass="textPadraoBold" stylesheets="@fonts/FontBold.css" text="Valor por Ano" />
+            <ImageView fitHeight="41.0" fitWidth="153.0" layoutX="23.0" layoutY="212.0" onMouseClicked="#confirmarSeguro" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Contratar.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="idTxfAnos" layoutX="21.0" layoutY="142.0" promptText="Quantidade de anos" styleClass="textPadraoBold" stylesheets="@fonts/FontBold.css" />
+            <ImageView fitHeight="41.0" fitWidth="165.0" layoutX="272.0" layoutY="212.0" onMouseClicked="#receberSeguro" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Receber.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: ffffff" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.projetonextfinal.controllers.PrincipalController">
+    <children>
+        <ImageView fitHeight="78.0" fitWidth="115.0" layoutX="67.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/next-6.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="313.0" layoutY="35.0" onMouseClicked="#onBtDepositoAction" stylesheets="@fonts/Font.css" text="DEPOSITO">
+            <font>
+                <Font name="Bradesco Sans Medium" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="472.0" layoutY="35.0" onMouseClicked="#onBtTransferenciaAction" stylesheets="@fonts/Font.css" text="TRANSFERENCIA">
+            <font>
+                <Font name="Bradesco Sans Medium" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="682.0" layoutY="35.0" onMouseClicked="#onBtAreaPixAction" stylesheets="@fonts/Font.css" text="AREA PIX">
+            <font>
+                <Font name="Bradesco Sans Medium" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="863.0" layoutY="35.0" onMouseClicked="#onBtCartoesAction" stylesheets="@fonts/Font.css" text="CARTÕES">
+            <font>
+                <Font name="Bradesco Sans Medium" size="12.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="659.0" fitWidth="589.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/tata.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="62.0" fitWidth="135.0" layoutX="1094.0" layoutY="18.0" onMouseClicked="#deslogar" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/Sair.png" />
+            </image>
+        </ImageView>
+      <Label layoutX="749.0" layoutY="187.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Seu Saldo:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelSaldo" layoutX="749.0" layoutY="217.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="R$ ">
+         <font>
+            <Font size="55.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="idPaneDeposito" layoutX="749.0" layoutY="332.0" prefHeight="355.0" prefWidth="474.0" visible="false">
+         <children>
+            <Label layoutX="34.0" layoutY="98.0" styleClass="textPadraoBold" stylesheets="@fonts/FontBold.css" text="Valor do Deposito:" />
+            <TextField fx:id="txtValorDeposito" layoutX="34.0" layoutY="146.0" promptText="00.00" styleClass="checkBox" stylesheets="@fonts/Font.css" />
+            <ImageView fitHeight="49.0" fitWidth="187.0" layoutX="34.0" layoutY="251.0" onMouseClicked="#onBtDepositarAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Depositar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="idPaneTransferencia" layoutX="749.0" layoutY="332.0" prefHeight="355.0" prefWidth="474.0" visible="false">
+         <children>
+            <Label layoutX="34.0" layoutY="114.0" styleClass="textPadraoBold" stylesheets="@fonts/FontBold.css" text="Valor da Transferência:" />
+            <TextField fx:id="txtValorTransferencia" layoutX="34.0" layoutY="162.0" promptText="00.00" styleClass="checkBox" stylesheets="@fonts/Font.css" />
+            <ImageView fitHeight="49.0" fitWidth="187.0" layoutX="34.0" layoutY="257.0" onMouseClicked="#onBtTransferirAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Depositar.png" />
+               </image>
+            </ImageView>
+            <ComboBox fx:id="contaComboBox" layoutX="34.0" layoutY="27.0" onAction="#onContaComboBoxAction" prefHeight="42.0" prefWidth="274.0" styleClass="checkBox" stylesheets="@fonts/Font.css" />
+            <ImageView fitHeight="49.0" fitWidth="187.0" layoutX="319.0" layoutY="24.0" onMouseClicked="#onBtAtualizarAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Atualizar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label fx:id="idTipoCliente" layoutX="749.0" layoutY="158.0" styleClass="textBold" stylesheets="@fonts/FontBold.css">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="idTipoConta" layoutX="749.0" layoutY="129.0" styleClass="textBold" stylesheets="@fonts/FontBold.css">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

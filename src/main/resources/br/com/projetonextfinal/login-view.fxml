@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color:ffffff" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.projetonextfinal.controllers.LoginController">
+   <children>
+      <ImageView onMouseClicked="#onBtRegistrarAction" fitHeight="62.0" fitWidth="135.0" layoutX="1094.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Cadastrar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="62.0" fitWidth="135.0" layoutX="677.0" layoutY="509.0" onMouseClicked="#onBtLoginCorrenteAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/ContaCorrente.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="campoLogin" layoutX="704.0" layoutY="254.0" promptText="12345678910" styleClass="textPadrao" stylesheets="@fonts/Font.css">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="campoSenha" layoutX="704.0" layoutY="403.0" promptText="1234" styleClass="textPadrao" stylesheets="@fonts/Font.css">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <Label alignment="TOP_LEFT" layoutX="704.0" layoutY="358.0" prefHeight="44.0" prefWidth="100.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="Senha:" textFill="#121212">
+         <font>
+            <Font name="Bradesco Sans Bold" size="21.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="78.0" fitWidth="115.0" layoutX="67.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/next-6.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="313.0" layoutY="35.0" stylesheets="@fonts/Font.css" text="TEM NO NEXT">
+         <font>
+            <Font name="Bradesco Sans Medium" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="472.0" layoutY="35.0" stylesheets="@fonts/Font.css" text="MIMOS">
+         <font>
+            <Font name="Bradesco Sans Medium" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="592.0" layoutY="35.0" stylesheets="@fonts/Font.css" text="SOBRE NÓS">
+         <font>
+            <Font name="Bradesco Sans Medium" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="727.0" layoutY="36.0" stylesheets="@fonts/Font.css" text="CARREIRAS">
+         <font>
+            <Font name="Bradesco Sans Medium" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="876.0" layoutY="35.0" stylesheets="@fonts/Font.css" text="AJUDA">
+         <font>
+            <Font name="Bradesco Sans Medium" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="659.0" fitWidth="589.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/tata.png" />
+         </image>
+      </ImageView>
+      <Label alignment="TOP_LEFT" layoutX="704.0" layoutY="210.0" prefHeight="44.0" prefWidth="100.0" styleClass="textBold" stylesheets="@fonts/FontBold.css" text="CPF:" textFill="#121212">
+         <font>
+            <Font name="Bradesco Sans Bold" size="21.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="62.0" fitWidth="135.0" layoutX="876.0" layoutY="509.0" onMouseClicked="#onBtLoginPoupancaAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/ContaPoupanca.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
