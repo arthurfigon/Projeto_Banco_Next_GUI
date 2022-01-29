@@ -30,6 +30,10 @@ public class ApolicesController implements Initializable {
     private ObservableList<Seguro> observableList;
     private Seguro seguroSelecionado;
 
+    public void limpaCampos(){
+        idTxfAnos.setText("");
+    }
+
     public void voltar(){
         Application.changeScene("cartoes");
     }
@@ -144,5 +148,6 @@ public class ApolicesController implements Initializable {
         observableList = FXCollections.observableList(listApolices);
         idCbSeguros.setItems(observableList);
         idPane.setVisible(false);
+        limpaCampos();
     }
 }

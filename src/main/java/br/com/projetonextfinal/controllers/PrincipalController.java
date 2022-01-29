@@ -40,6 +40,19 @@ public class PrincipalController implements Initializable {
 
     private Conta contaSelecionada;
 
+    public void limpaTodosCampos(){
+        idTipoCliente.setText("");
+        idTipoConta.setText("");
+        labelSaldo.setText("");
+        txtValorDeposito.setText("");
+        txtValorTransferencia.setText("");
+    }
+
+    public void limpaCampos(){
+        txtValorDeposito.setText("");
+        txtValorTransferencia.setText("");
+    }
+
     @FXML
     public void onContaComboBoxAction(){
         this.contaSelecionada = contaComboBox.getSelectionModel().getSelectedItem();
@@ -98,6 +111,7 @@ public class PrincipalController implements Initializable {
     }
 
     public void deslogar(){
+        limpaTodosCampos();
         Application.changeScene("main");
     }
 
@@ -138,18 +152,15 @@ public class PrincipalController implements Initializable {
         contaComboBox.setItems(observableList);
     }
 
-    public void limpaCampos(){
-        txtValorDeposito.setText("");
-        txtValorTransferencia.setText("");
-    }
-
     @FXML
     public void onBtAreaPixAction() {
+        limpaCampos();
         Application.changeScene("pix");
     }
 
     @FXML
     public void onBtCartoesAction() {
+        limpaCampos();
         Application.changeScene("cartoes");
     }
 }

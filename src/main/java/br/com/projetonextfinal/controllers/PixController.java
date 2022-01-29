@@ -33,12 +33,20 @@ public class PixController implements Initializable {
     public AnchorPane idPanePagamento;
     public AnchorPane idPaneConta;
 
+    public void limpaCampos(){
+        txtConteudoCadastroChave.setText("");
+        txtConteudoConsultaChave.setText("");
+        txtValorChave.setText("");
+        txtCampoPagamentoPix.setText("");
+    }
+
     public void onBtCadastrarChaveAction(){
         fechaPanes();
         idPaneCadastro.setVisible(true);
     }
     
     public void fechaPanes(){
+        limpaCampos();
         idPaneCadastro.setVisible(false);
         idPanePagamento.setVisible(false);
         idPaneConsulta.setVisible(false);
@@ -217,6 +225,7 @@ public class PixController implements Initializable {
     }
 
     public void onBtVoltarAction(){
+        limpaCampos();
         Application.changeScene("transferencia");
     }
 

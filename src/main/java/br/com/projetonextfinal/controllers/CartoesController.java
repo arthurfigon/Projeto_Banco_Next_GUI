@@ -63,7 +63,21 @@ public class CartoesController implements Initializable {
         }
     }
 
+    public void limpaTudo(){
+        campoSenhaCredito.setText("");
+        campoBandeiraCredito.setText("");
+        campoDiaCredito.setText("");
+        campoSenhaDebito.setText("");
+        campoBandeiraDebito.setText("");
+        campoLimiteDebito.setText("");
+        campoProdutoCredito.setText("");
+        campoValorCredito.setText("");
+        campoProdutoDebito.setText("");
+        campoValorDebito.setText("");
+    }
+
     public void fechaTudo(){
+        limpaTudo();
         idPaneOpcoesCredito.setVisible(false);
         idPaneOpcoesDebito.setVisible(false);
         idPaneCadastrarCredito.setVisible(false);
@@ -175,7 +189,7 @@ public class CartoesController implements Initializable {
     }
 
 
-    // Débito
+    // DEBIT METHODS
 
     @FXML
     public void onBtDebitoAction(){

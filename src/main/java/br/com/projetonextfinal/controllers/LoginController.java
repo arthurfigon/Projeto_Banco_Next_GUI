@@ -45,6 +45,7 @@ public class LoginController implements Initializable {
             recusado();
             return;
         }
+        limpaCampos();
     }
 
     @FXML

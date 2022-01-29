@@ -41,6 +41,20 @@ public class BancoDeDados {
                 "1234567",
                 clienteBO2.getCliente(),
                 TipoConta.POUPANCA).getConta();
+
+        ClienteBO clienteBO3 = new ClienteBO(
+                "33333333333",
+                "Matheus Henrique",
+                data,
+                endereco,
+                "matheus@next.com",
+                "(11) 99999-9999");
+
+        Conta contaBO3 = new ContaBO(
+                "1234567",
+                clienteBO3.getCliente(),
+                TipoConta.CORRENTE).getConta();
+
     }
 
     public static Conta findContabyChavePix(String chave){
